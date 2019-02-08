@@ -1,0 +1,21 @@
+<soap12:Envelope
+    xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:tt="http://www.onvif.org/ver10/schema">
+    <s:Header>
+        <Security s:mustUnderstand="1"
+            xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+            <UsernameToken>
+                <Username>{username}</Username>
+                <Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">{digest}</Password>
+                <Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">{nonce}</Nonce>
+                <Created
+                    xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">{created}</Created>
+            </UsernameToken>
+        </Security>
+    </s:Header>
+    <soap12:Body>
+        <GetNetworkProtocols xmlns="http://www.onvif.org/ver10/device/wsdl" />
+    </soap12:Body>
+</soap12:Envelope>
