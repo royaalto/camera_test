@@ -19,8 +19,8 @@
     </s:Header>
     <soap:Body>
         <wsdl:SendAuxiliaryCommand>
-        <tptz:ProfileToken>Profile_1</tptz:ProfileToken>
-        <tt:AuxiliaryData>tt:Wiper|Off</tt:AuxiliaryData>
+        <tptz:ProfileToken>1</tptz:ProfileToken>
+        <tt:AuxiliaryData>Wiper|Off</tt:AuxiliaryData>
         </wsdl:SendAuxiliaryCommand>
     </soap:Body>
 </soap:Envelope>
