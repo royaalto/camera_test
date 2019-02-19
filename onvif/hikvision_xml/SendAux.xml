@@ -1,8 +1,5 @@
-
-<soap:Envelope
-    xmlns="http://www.w3.org/2003/05/soap-envelope"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<s:Envelope
+    xmlns:s="http://www.w3.org/2003/05/soap-envelope"
     xmlns:tt="http://www.onvif.org/ver10/schema"
     xmlns:tptz="http://www.onvif.org/ver20/ptz/wsdl">
     <s:Header>
@@ -17,10 +14,10 @@
             </UsernameToken>
         </Security>
     </s:Header>
-    <soap:Body>
-        <wsdl:SendAuxiliaryCommand>
+    <s:Body>
+        <tptz:SendAuxiliaryCommand>
         <tptz:ProfileToken>Profile_1</tptz:ProfileToken>
-        <tt:AuxiliaryData>tt:Wiper|Off</tt:AuxiliaryData>
-        </wsdl:SendAuxiliaryCommand>
-    </soap:Body>
-</soap:Envelope>
+        <tptz:AuxiliaryData>tt:Wiper|Off</tptz:AuxiliaryData>
+        </tptz:SendAuxiliaryCommand>
+    </s:Body>
+</s:Envelope>
