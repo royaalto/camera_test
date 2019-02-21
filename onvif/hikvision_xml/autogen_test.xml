@@ -13,9 +13,9 @@
    <Security s:mustUnderstand="1" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
         <UsernameToken>
             <Username>admin</Username>
-            <Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">AWILXVk6Mx6keTUyHjNtDIlnIR8=</Password>
-            <Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">UU0KHAG+ZxtmPaH/GuDlNH9qFmQ=</Nonce>
-            <Created xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2019-02-21T00:15:32.000Z</Created>
+            <Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">LB/Ca1sUAdcflpqlQS+urDhfNLM=</Password>
+            <Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">b8thCxuBsLVecSETQ9zoZ8g/7Vg=</Nonce>
+            <Created xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2019-02-21T01:15:49.000Z</Created>
         </UsernameToken>
     </Security>
   </s:Header>
@@ -23,7 +23,8 @@
     <tptz:ContinuousMove>
       <tptz:ProfileToken>Profile_1</tptz:ProfileToken>
       <tptz:Velocity>
-        <tt:Zoom x="-0.1"/>
+	<tt:Pantilt x="0" y="0"/>
+        <tt:Zoom x="0.1"/>
       </tptz:Velocity>
     </tptz:ContinuousMove>
   </s:Body>

@@ -20,12 +20,8 @@
     </Security>
   </s:Header>
   <s:Body>
-    <tptz:ContinuousMove>
+    <tptz:Stop>
       <tptz:ProfileToken>Profile_1</tptz:ProfileToken>
-      <tptz:Velocity>
-	<tt:Pantilt x="0" y="0"/>
-        <tt:Zoom x="0.1"/>
-      </tptz:Velocity>
-    </tptz:ContinuousMove>
+    </tptz:Stop>
   </s:Body>
 </s:Envelope>
