@@ -12,19 +12,20 @@
   <s:Header>
    <Security s:mustUnderstand="1" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
         <UsernameToken>
-            <Username>admin</Username>
-            <Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">AWILXVk6Mx6keTUyHjNtDIlnIR8=</Password>
-            <Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">UU0KHAG+ZxtmPaH/GuDlNH9qFmQ=</Nonce>
-            <Created xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2019-02-21T00:15:32.000Z</Created>
+            <Username>{username}</Username>
+            <Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">{digest}</Password>
+            <Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">{nonce}</Nonce>
+            <Created xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">{created}</Created>
         </UsernameToken>
     </Security>
   </s:Header>
   <s:Body>
-    <tptz:ContinuousMove>
+    <tptz:RelativeMove>
       <tptz:ProfileToken>Profile_1</tptz:ProfileToken>
-      <tptz:Velocity>
-        <tt:Zoom x="-0.1"/>
-      </tptz:Velocity>
-    </tptz:ContinuousMove>
+      <tptz:Translation>
+        <tt:PanTilt x="0.1" y="0.3"/>
+        <tt:Zoom x="0"/>
+      </tptz:Translation>
+    </tptz:RelativeMove>
   </s:Body>
 </s:Envelope>

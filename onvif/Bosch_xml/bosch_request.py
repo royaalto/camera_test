@@ -4,10 +4,10 @@ import base64
 from datetime import datetime
 import subprocess
 
-with open('xml_example/bosch_sendaux.xml', 'r') as myfile:
+with open('getcapablities.xml', 'r') as myfile:
     data = myfile.read()
 username = "service"
-password = "1234hailee"
+password = "Service17!"
 # created = datetime.now().strftime("%Y-%m-%dT%H:%M:%S.000Z")
 created = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S.000Z")
 #created = "2019-01-31T09:29:20.000Z"
@@ -27,4 +27,4 @@ print(req_body)
 text_file = open("test.xml", "w")
 text_file.write(req_body)
 text_file.close()
-os.system("curl --silent -X POST --header 'Content-Type: text/xml; charset=utf-8;; action=\"http: // www.onvif.org/ver20/ptz/wsdl/Stop\"' --header 'SOAPAction: \"http: // www.onvif.org/ver20/ptz/wsdl/Stop\"' -d @test.xml 'http://192.168.100.203/onvif/device_service' | xmllint --format -")
+os.system("curl --silent -X POST --header 'Content-Type: text/xml; charset=utf-8;; action=\"http: // www.onvif.org/ver20/ptz/wsdl/Stop\"' --header 'SOAPAction: \"http: // www.onvif.org/ver20/ptz/wsdl/Stop\"' -d @test.xml 'http://192.168.100.204/onvif/device_service' | xmllint --format -")
