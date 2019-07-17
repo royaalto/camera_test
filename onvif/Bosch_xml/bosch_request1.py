@@ -4,7 +4,7 @@ import base64
 from datetime import datetime
 import subprocess
 
-with open('xml_example/getcapablities.xml', 'r') as myfile:
+with open('GetRelayOutputs.xml', 'r') as myfile:
     data = myfile.read()
 username = "service"
 password = "iPilot!19"

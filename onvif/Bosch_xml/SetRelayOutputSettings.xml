@@ -1,0 +1,13 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:wsdl="http://www.onvif.org/ver10/device/wsdl" xmlns:sch="http://www.onvif.org/ver10/schema">
+   <soap:Header/>
+   <soap:Body>
+      <wsdl:SetRelayOutputSettings>
+         <wsdl:RelayOutputToken>?</wsdl:RelayOutputToken>
+         <wsdl:Properties>
+            <sch:Mode>?</sch:Mode>
+            <sch:DelayTime>?</sch:DelayTime>
+            <sch:IdleState>?</sch:IdleState>
+         </wsdl:Properties>
+      </wsdl:SetRelayOutputSettings>
+   </soap:Body>
+</soap:Envelope>
