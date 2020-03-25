@@ -23,7 +23,9 @@
   <s:Body>
       <tds:SetRelayOutputState>
           <tds:RelayOutputToken>Output_1</tds:RelayOutputToken>
-          <tds:LogicalState>active</tds:LogicalState>
+          <tds:LogicalState>inactive</tds:LogicalState>
        </tds:SetRelayOutputState>
   </s:Body>
 </s:Envelope>
+
+

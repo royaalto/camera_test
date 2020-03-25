@@ -7,25 +7,25 @@
   xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" 
   xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" 
   xmlns:tt="http://www.onvif.org/ver10/schema" 
-  xmlns:ter="http://www.onvif.org/ver10/error"
-	xmlns:tds="http://www.onvif.org/ver10/device/wsdl" 
+  xmlns:ter="http://www.onvif.org/ver10/error" 
   xmlns:tptz="http://www.onvif.org/ver20/ptz/wsdl">
   <s:Header>
    <Security s:mustUnderstand="1" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
         <UsernameToken>
-            <Username>service</Username>
-            <Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">BNlkd0Oj8JKXMfaj5L/F3i3icvc=</Password>
-            <Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">ZQC9m6L6ecrw96Yq6dQoVXv82fg=</Nonce>
-            <Created xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2019-11-06T03:06:35.000Z</Created>
+            <Username>{username}</Username>
+            <Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">{digest}</Password>
+            <Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">{nonce}</Nonce>
+            <Created xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">{created}</Created>
         </UsernameToken>
     </Security>
   </s:Header>
   <s:Body>
-      <tds:SetRelayOutputState>
-          <tds:RelayOutputToken>Output_1</tds:RelayOutputToken>
-          <tds:LogicalState>inactive</tds:LogicalState>
-       </tds:SetRelayOutputState>
+    <tptz:RelativeMove>
+      <tptz:ProfileToken>1</tptz:ProfileToken>
+      <tptz:Translation>
+        <tt:PanTilt x="0.1" y="0.3"/>
+        <tt:Zoom x="0"/>
+      </tptz:Translation>
+    </tptz:RelativeMove>
   </s:Body>
 </s:Envelope>
-
-
